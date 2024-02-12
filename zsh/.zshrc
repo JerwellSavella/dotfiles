@@ -12,8 +12,6 @@ ZSH_THEME="agnoster"
 print
 neofetch
 print
-fortune
-print
 echo Welcome,
 echo Jerwell
 print
