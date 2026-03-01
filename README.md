@@ -8,3 +8,9 @@
 	- zsh-autosuggestions
 	- zsh-syntax-highlighting
 - Color Theme: Gogh
+
+
+## Installation
+
+- Install zsh: ```sudo install zsh``` 
+- change to default shell to zsh using ```chsh```
