@@ -117,3 +117,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
