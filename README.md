@@ -1,29 +1,41 @@
-# Settings
+# Personal Configuration for terminal workflow
 
-- Terminal: Just the simple Gnome, out of the box terminal :)
-- zsh or bash (it's alright, simple and fast is the goal)
-- powerlevel10k (Personal Computer)
-- starship (Work machine)
-- nerdFont
-- Plugins
-	- zsh-autosuggestions
-	- zsh-syntax-highlighting
-- Color Theme: Gogh
+## Tools use:
+
+- Bash and ZSH (Bash is for work and ZSH for my computer, but for convenience I modified my .bashrc file to be compatible for both)
+- STOW for symlinking and convenience of loading my existing configuration
+- powerlevel10k
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- Gogh Theme
 
 
-## Installation
+## Guide
+- Install ZSH 
+- Install Stow
+- clone this repository
+- using gnu stow, stow the bashrc configuration: `stow -d ~/Github/dotfiles -t ~ bashrc`
+- Stow .zshrc configuration: `stow -d ~/Github/dotfiles -t ~ zshrc`
+- install zsh-autosuggestions plugin: `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+- install zsh-syntax-highlighting plugin: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+- add those plugins to .zshrc file: `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
+- Install powerlevel10k using this command: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
+if not yet added, add this line to .zshrc file: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
+- Stow the powerlevel10k and as well the .p10k.zsh configuration: `stow -d ~/Github/dotfiles -t ~ powerlevel10k`
 
-1. Install zsh (If you want)
-- Install using:  ```sudo install zsh``` 
-- Check your default shell using ```echo $0```
-- Change to default shell to zsh using ```chsh```
-- Choose number 2 when being prompt by zshell to populate your .zshrc file with recommended configuration
 
-2. Installation of powerlevel10k 
-- ```git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"```
-- Add ```powerlevel10k/powerlevel10k``` to ```.zshrc``` file
+## Install terminal theme configuration
+- Install Gogh Theme: `bash -c  "$(wget -qO- https://git.io/vQgMr)"`
+- Pick 155 which is the Gruvbox Material Dark theme (My personal favorite :) ) 
+- Right Click terminal, Preferences, and choose that Gruvbox Material Dark as default
 
-3. Installation of starship (when using bash)
-- ```sudo curl -sS https://starship.rs/install.sh | sh ```
-- Add following line to the end of the file ```.bashrc``` ```eval "$(starship init bash)```
-- Run: ```~/.bashrc```
+
+## Font Installation
+- Install font in MesloLGS NF font in: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
+- Right click terminal and under Profile click the custom font and pick the MesloLGS NF
+
+
+
+
+
+
