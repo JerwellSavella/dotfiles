@@ -22,6 +22,7 @@
 - Install powerlevel10k using this command: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
 if not yet added, add this line to .zshrc file: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 - Stow the powerlevel10k and as well the .p10k.zsh configuration: `stow -d ~/Github/dotfiles -t ~ powerlevel10k`
+- Stow the oh-my-zsh configuration: `stow -d ~/Github/dotfiles -t ~ oh-my-zsh`
 
 
 ## Install terminal theme configuration
