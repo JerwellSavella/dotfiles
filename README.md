@@ -3,7 +3,7 @@
 ## Tools use:
 
 - Bash and ZSH (Bash is for work and ZSH for my computer, but for convenience I modified my .bashrc file to be compatible for both)
-- STOW for symlinking and convenience of loading my existing configuration
+- STOW for symlinking and convenience of loading my existing configuration, I recommend reading the documentation and on how to use and implement this Stow, it's nice :)
 - powerlevel10k
 - zsh-autosuggestions
 - zsh-syntax-highlighting
@@ -23,6 +23,17 @@
 if not yet added, add this line to .zshrc file: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
 - Stow the powerlevel10k and as well the .p10k.zsh configuration: `stow -d ~/Github/dotfiles -t ~ powerlevel10k`
 - Stow the oh-my-zsh configuration: `stow -d ~/Github/dotfiles -t ~ oh-my-zsh`
+
+
+## NVIM with LazyVim Configuration Installation
+- Download the Latest version of neovim from github repository, I use nvim-linux-x86_64.tar.gz and Extract: `tar xzvf nvim-linux-x86_64.tar.gz`
+- Move the nvim-linux-x86_64 file from Download to /opt/ folder: `sudo mv ~/Downloads/nvim-linux-x86_64 /opt/` 
+- Add this line in the bottom of your .zshrc file: `export PATH="$PATH:/opt/nvim-linux-x86_64/bin"`
+- Refresh your .zshrc or .bashrc if you use that: `source ~/.zshrc`
+
+- Loading your own nvim configuration with lazyVim already configured files that is available here as well, 
+- Stow nvim file in this repository: `stow -d ~/Github/dotfiles -t ~ nvim`
+- Enter `nvim` command in terminal and see if the configuration is loaded (Note: Download xclip to your system for yanking functionality to work)
 
 
 ## Install terminal theme configuration
