@@ -22,10 +22,8 @@ Setup
 2. Install Oh My Zsh. Install it before stowing the zshrc or OMZ config, so the ~/.oh-my-zsh directory exists first.
 3. Stow the Oh My Zsh configuration `stow -d ~/Github/dotfiles -t ~ oh-my-zsh`
 4. Install ZSH plugins (zsh-autosuggestions and zsh-syntax-highlighting): 
-- `git clone https://github.com/zsh-users/zsh-autosuggestions \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+- `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 - add those plugins to .zshrc file: `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
 5. Install Powerlevel10k: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
 6. Stow the ZSH and Powerlevel10k configurations: `stow -d ~/Github/dotfiles -t ~ zshrc` and `stow -d ~/Github/dotfiles -t ~ powerlevel10k`
