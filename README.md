@@ -11,19 +11,25 @@
 
 
 ## Guide
-- Install ZSH 
-- Install Stow
-- clone this repository
-- using gnu stow, stow the bashrc configuration: `stow -d ~/Github/dotfiles -t ~ bashrc`
-- Stow .zshrc configuration: `stow -d ~/Github/dotfiles -t ~ zshrc`
-- install zsh-autosuggestions plugin: `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-- install zsh-syntax-highlighting plugin: `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
-- add those plugins to .zshrc file: `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
-- Install powerlevel10k using this command: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
-if not yet added, add this line to .zshrc file: `echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc`
-- Stow the powerlevel10k and as well the .p10k.zsh configuration: `stow -d ~/Github/dotfiles -t ~ powerlevel10k`
-- Stow the oh-my-zsh configuration: `stow -d ~/Github/dotfiles -t ~ oh-my-zsh`
 
+Prerequisites
+1. Install ZSH
+2. Install GNU Stow
+3. Clone the dotfiles repository
+
+Setup
+1. Stow the bash configuration: `stow -d ~/Github/dotfiles -t ~ bashrc`
+2. Install Oh My Zsh. Install it before stowing the zshrc or OMZ config, so the ~/.oh-my-zsh directory exists first.
+3. Stow the Oh My Zsh configuration `stow -d ~/Github/dotfiles -t ~ oh-my-zsh`
+4. Install ZSH plugins (zsh-autosuggestions and zsh-syntax-highlighting): 
+- `git clone https://github.com/zsh-users/zsh-autosuggestions \
+  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+- `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+- add those plugins to .zshrc file: `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
+5. Install Powerlevel10k: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k`
+6. Stow the ZSH and Powerlevel10k configurations: `stow -d ~/Github/dotfiles -t ~ zshrc` and `stow -d ~/Github/dotfiles -t ~ powerlevel10k`
+7. Apply the configuration: `source ~/.zshrc`
 
 ## NVIM with LazyVim Configuration Installation
 - Download the Latest version of neovim from github repository, I use nvim-linux-x86_64.tar.gz and Extract: `tar xzvf nvim-linux-x86_64.tar.gz`
@@ -33,7 +39,7 @@ if not yet added, add this line to .zshrc file: `echo 'source ~/powerlevel10k/po
 
 - Loading your own nvim configuration with lazyVim already configured files that is available here as well, 
 - Stow nvim file in this repository: `stow -d ~/Github/dotfiles -t ~ nvim`
-- Enter `nvim` command in terminal and see if the configuration is loaded (Note: Download xclip to your system for yanking functionality to work)
+- Enter `nvim` command in terminal and see if the configuration is loaded (Note: Download xclip and ripgrep to your system for yanking functionality to work)
 
 
 ## Install terminal theme configuration
