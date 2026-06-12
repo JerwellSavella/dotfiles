@@ -119,31 +119,33 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
+# Alias to fix hardcoded conda/mamba paths after any future `conda init` rewrite
+alias fix-conda-init="sed -i 's|/home/[^/]*/miniforge3|\$HOME/miniforge3|g' ~/.zshrc"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jerwell.savella@sfgc.com.ph/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/miniforge3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jerwell.savella@sfgc.com.ph/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/jerwell.savella@sfgc.com.ph/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jerwell.savella@sfgc.com.ph/miniforge3/bin:$PATH"
+        export PATH="$HOME/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
-
+# <<< conda initialize <
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba shell init' !!
-export MAMBA_EXE='/home/jerwell.savella@sfgc.com.ph/miniforge3/bin/mamba';
-export MAMBA_ROOT_PREFIX='/home/jerwell.savella@sfgc.com.ph/miniforge3';
+export MAMBA_EXE="$HOME/miniforge3/bin/mamba"
+export MAMBA_ROOT_PREFIX="$HOME/miniforge3"
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
 else
-    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    alias mamba="$MAMBA_EXE"
 fi
 unset __mamba_setup
-# <<< mamba initialize <<<
+# <<< mamba initialize <
